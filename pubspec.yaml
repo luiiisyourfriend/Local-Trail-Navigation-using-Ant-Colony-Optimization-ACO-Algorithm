@@ -1,0 +1,59 @@
+name: testing
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_map: ^4.0.0
+  latlong2: ^0.8.1
+ # video_player: ^2.5.0
+
+
+
+  cupertino_icons: ^1.0.8
+  geolocator: ^13.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^4.0.0
+
+
+flutter:
+  assets:
+    - assets/images/checkpoint1.jpg
+    - assets/images/checkpoint2.jpg
+    - assets/images/checkpoint3.jpg
+    - assets/images/checkpoint4.jpg
+    - assets/images/checkpoint5.jpg
+    - assets/images/checkpoint6.jpg
+    - assets/images/checkpoint7.jpg
+    - assets/images/checkpoint8.jpg
+    - assets/images/checkpoint9.jpg
+    - assets/images/checkpoint10.jpg
+
+
+  uses-material-design: true
+

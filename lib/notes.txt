@@ -1,0 +1,87 @@
+import 'package:latlong2/latlong.dart';
+
+/// Node model to hold location data, name, description, and image path
+class Node {
+  final LatLng location;
+  final String name;
+  final String description;
+  final String? imagePath; // Optional: Add an image for the checkpoint
+
+  Node(this.location, this.name, this.description, {this.imagePath});
+}
+
+class Nodes {
+  // Default starting point
+  static LatLng startingPoint = LatLng(10.941898, 122.004971);
+
+  // List of all nodes with metadata
+  static List<Node> nodes = [
+    Node(
+      LatLng(10.941940, 122.004965),
+      "Start Point",
+      "Entry of the trail. The beginning of your journey.",
+      imagePath: 'assets/images/start_point.jpg',
+    ),
+    Node(
+      LatLng(10.941829, 122.004963),
+      "Checkpoint 1",
+      "A scenic viewpoint with great photo opportunities.",
+      imagePath: 'assets/images/checkpoint1.jpg',
+    ),
+    Node(
+      LatLng(10.941708, 122.004957),
+      "Checkpoint 2",
+      "Shaded rest area under large trees.",
+      imagePath: 'assets/images/checkpoint2.jpg',
+    ),
+    Node(
+      LatLng(10.940923, 122.005089),
+      "Rocky Path",
+      "Be cautious as the trail gets rocky.",
+    ),
+    Node(
+      LatLng(10.939936, 122.006460),
+      "Steep Climb",
+      "The steepest section of the trail. Take breaks as needed.",
+    ),
+    Node(
+      LatLng(10.939009, 122.007755),
+      "Scenic Viewpoint",
+      "Enjoy breathtaking views of the surroundings.",
+    ),
+    Node(
+      LatLng(10.938074, 122.009085),
+      "Rest Stop",
+      "Rest area with benches and some shade.",
+    ),
+    Node(
+      LatLng(10.930394, 122.016875),
+      "End Point",
+      "You have reached the end of the trail. Congratulations!",
+      imagePath: 'assets/images/end_point.jpg',
+    ),
+  ];
+
+  // Grouped Checkpoints (optional)
+  static List<Node> scenicViewpoints = [
+    nodes[1], // Checkpoint 1
+    nodes[5], // Scenic Viewpoint
+  ];
+
+  static List<Node> restAreas = [
+    nodes[2], // Checkpoint 2
+    nodes[6], // Rest Stop
+  ];
+
+  static List<Node> challengingSections = [
+    nodes[3], // Rocky Path
+    nodes[4], // Steep Climb
+  ];
+
+  // Function to extract only locations (LatLng) from nodes
+  static List<LatLng> get nodeLocations =>
+      nodes.map((node) => node.location).toList();
+
+  // Default center for the map
+  static LatLng defaultCenter = LatLng(10.941987, 122.004955);
+}
